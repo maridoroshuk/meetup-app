@@ -9,14 +9,14 @@ function HomePage({ meetups }) {
       <title>Meetups</title>
       <meta name="description" content="browse active meetups"/>
     </Head>
-      <MeetupList meetups={meetups} />;
+      <MeetupList meetups={meetups} />
     </>
   );
 }
 
 export async function getStaticProps() {
   const client = MongoClient.connect(
-    "mongodb+srv://marynadarashuk:Asdfghjkl1234@cluster0.ksdtr.mongodb.net/meetups?retryWrites=true&w=majority"
+    "mongodb+srv://someuser:vvMjI9VbOshViF2i@cluster0.ksdtr.mongodb.net/meetups?retryWrites=true&w=majority"
   );
   const db = (await client).db();
 
